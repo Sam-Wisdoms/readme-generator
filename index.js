@@ -3,17 +3,12 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// come up with README.md file default structure
-// Decide questions to ask and the question format
-// Generate the README.md content based on the user input
-// Write to README.md file
-
 // array of questions for user
 const questions = [
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your project'
+            message: 'What is the title of your project?'
         },
         {
             type: 'input',
@@ -21,14 +16,16 @@ const questions = [
             message: 'What is your project about?'
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'content',
-            message: 'What is the table of content of your project?'
+            message: 'What is the table of content of your project?',
+            choices: ['\n Title ', '\n About ', '\n Installation ', '\n Usage ', '\n Licenses ', '\n Contribution Guide ', '\n Testing ', '\n How to ask questions ']
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'installation',
-            message: 'What installations are needed to use the project?'
+            message: 'What is the installation guide for your project?',
+            choices: ['\n Download ', '\n Next ', '\n Next ', ' \n Install' ]
         },
         {
             type: 'input',
@@ -36,19 +33,21 @@ const questions = [
             message: 'How can the project be used?'
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'license',
-            message: 'Which licenses are required to use your project?'
+            message: 'Which licenses are required to use your project?',
+            choices: ['\n MIT ', '\n Apache License ', '\n GPL ']
         },
         {
             type: 'input',
-            name: 'contribution',
+            name: 'contribution',       
             message: 'How can people contribute to use your project?'
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'testing',
-            message: 'Which testings have you done to ensure your project is complete?'
+            message: 'Which testings have you done to ensure your project is complete?',
+            choices: ['\n Smoke testing', '\n System testing', '\n Exploratory test', '\n Usability Test']
         },
         {
             type: 'input',
@@ -57,31 +56,39 @@ const questions = [
         },
 ];
 
-// function to initialize program
-function init() {
-    inquirer
-        .prompt([
-            {
-                type: 'input',
-                name: 'title',
-                message: 'What is the title of your project?'
-            },
-            {
-                type: 'input',
-                name: 'description',
-                message: 'What is your project about?'
-            },
-
-        ])
-        .then((answers) =>{
-            const readmeContent = generateMarkdown(answers)
-        })
-}
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err)=>{
+        if(err){
+            console.log(err)
+        }else{
+            console.log('Successful')
+        }
+    })
 
+}
+
+// function to initialize program
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((answers) =>{
+            writeToFile('README.md', generateMarkdown(answers))
+        })
 }
 
 // function call to initialize program
 init();
+
+
+
+
+
+
+
+
+// come up with README.md file default structure
+// Decide questions to ask and the question format
+// Generate the README.md content based on the user input
+// Write to README.md file
