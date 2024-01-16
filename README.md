@@ -3,7 +3,7 @@
   Track
 
 ## Description
-  ' It is a project management app that help project managers to stay in charge of their projects.'
+  " It is a project management app that help project managers to manage their projects well."
 
 ## Table of content
   
@@ -24,7 +24,7 @@
  Install
 
 ## How to use the project
-  'To use the project, make sure to download and install the track app which has an inbuilt instruction.'
+  "To use the project, make sure to download and install the track app which has an inbuilt instruction."
 
 ## License
   
@@ -33,10 +33,14 @@
  GPL 
 
 ## How to contribute
-  'Send an email track@track.com about what you wish to contribute to and you will be given access to the project repo.'
+  "Send an email track@track.com about what you wish to contribute to and you will be given access to the project repo."
 
 ## Testing
-  ['\n Smoke test', '\n Unit test', '\n Utility test'
+  
+ Smoke Testing,
+ System Testing,
+ Exploratory Test,
+ Usability Test
 
 ## Questions
-  'Send an email to track@track.com'
+  "Email your queries to track@track.com"

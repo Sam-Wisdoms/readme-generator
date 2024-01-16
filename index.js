@@ -47,7 +47,7 @@ const questions = [
             type: 'checkbox',
             name: 'testing',
             message: 'Which testings have you done to ensure your project is complete?',
-            choices: ['\n Smoke testing', '\n System testing', '\n Exploratory test', '\n Usability Test']
+            choices: ['\n Smoke Testing', '\n System Testing', '\n Exploratory Test', '\n Usability Test']
         },
         {
             type: 'input',
@@ -80,15 +80,3 @@ function init() {
 
 // function call to initialize program
 init();
-
-
-
-
-
-
-
-
-// come up with README.md file default structure
-// Decide questions to ask and the question format
-// Generate the README.md content based on the user input
-// Write to README.md file
