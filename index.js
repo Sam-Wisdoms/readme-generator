@@ -19,7 +19,9 @@ const questions = [
             type: 'checkbox',
             name: 'content',
             message: 'What is the table of content of your project?',
-            choices: ['\n Title ', '\n About ', '\n Installation ', '\n Usage ', '\n Licenses ', '\n Contribution Guide ', '\n Testing ', '\n How to ask questions ']
+            choices: [
+                '\n Title ', 
+            '\n About ', '\n Installation ', '\n Usage ', '\n Licenses ', '\n Contribution Guide ', '\n Testing ', '\n How to ask questions ']
         },
         {
             type: 'checkbox',

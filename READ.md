@@ -25,10 +25,10 @@ Also, I have had some difficulties with how Node.js works in the terminal but I 
 [Video Recording](https://drive.google.com/file/d/1iXinMMq4OTRacnhjCB9zlnvm542A7Hyt/view)
 
 ## Screen Shot
-![Alt text](<README Generator Screen Shot.png>)
+![Alt text](<READMEGenerator.png>)
 
 
-## Credits: 
+## Credits:
 Mr. Dennis Itua (Instructor)
 Mr. Marcin Kacperski (TA)
 
